@@ -61,3 +61,8 @@ Website: https://gitlab.com
 ### Magnum CI
 
 [![build status](https://magnum-ci.com/status/534625fc485aa0eb5140eba1e2537cf5.png)](https://magnum-ci.com/projects/4282)
+
+
+### AppVeyor
+
+[![Build status](https://ci.appveyor.com/api/projects/status/1sgbt8joq2ta8cwk?svg=true)](https://ci.appveyor.com/project/markuspoerschke/guestbook)
