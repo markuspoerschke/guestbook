@@ -49,3 +49,11 @@ Website: https://wercker.com
 Website: https://codeship.com
 
 [ ![Codeship Status for markuspoerschke/guestbook](https://codeship.com/projects/457da6b0-00d3-0134-b0c6-0218c6b64764/status?branch=master)](https://codeship.com/projects/153335)
+
+
+### GitLab CI
+
+Website: https://gitlab.com
+
+[![build status](https://gitlab.com/markuspoerschke/guestbook/badges/master/build.svg)](https://gitlab.com/markuspoerschke/guestbook/commits/master)
+

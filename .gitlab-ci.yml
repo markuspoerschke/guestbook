@@ -1,0 +1,13 @@
+before_script:
+  - php -v
+  - composer install
+
+test:5.6:
+  image: php:5.6
+  script:
+    - composer test
+
+test:latest:
+  image: php
+  script:
+    - composer test
