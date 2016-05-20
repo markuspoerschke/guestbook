@@ -1,6 +1,6 @@
 before_script:
   - php -v
-  - curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   - composer install
 
 test:5.6:
