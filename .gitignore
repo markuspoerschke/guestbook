@@ -1,2 +1,6 @@
 /composer.lock
 /vendor
+/_builds
+/_cache
+/_projects
+/_steps

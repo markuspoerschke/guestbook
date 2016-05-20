@@ -1,0 +1,15 @@
+box: php
+
+build:
+  steps:
+    - install-packages:
+        packages: git
+    - script:
+        name: install composer
+        code: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+    - script:
+        name: install dependencies
+        code: composer install
+    - script:
+        name: run unit tests
+        code: composer test
