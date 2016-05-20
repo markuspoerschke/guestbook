@@ -13,3 +13,9 @@ Website: https://travis-ci.org
 Website: https://drone.io
 
 [![Build Status](https://drone.io/github.com/markuspoerschke/guestbook/status.png)](https://drone.io/github.com/markuspoerschke/guestbook/latest)
+
+### CircleCI
+
+Website: https://circleci.com
+
+[![CircleCI](https://circleci.com/gh/markuspoerschke/guestbook.svg?style=svg)](https://circleci.com/gh/markuspoerschke/guestbook)
