@@ -57,3 +57,7 @@ Website: https://gitlab.com
 
 [![build status](https://gitlab.com/markuspoerschke/guestbook/badges/master/build.svg)](https://gitlab.com/markuspoerschke/guestbook/commits/master)
 
+
+### Magnum CI
+
+[![build status](https://magnum-ci.com/status/534625fc485aa0eb5140eba1e2537cf5.png)](https://magnum-ci.com/projects/4282)

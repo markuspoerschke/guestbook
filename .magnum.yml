@@ -1,0 +1,3 @@
+script:
+  - php -v
+  - composer test
