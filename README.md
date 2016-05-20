@@ -25,3 +25,9 @@ Website: https://circleci.com
 Website: http://shippable.com
 
  [![Run Status](https://api.shippable.com/projects/573f2b372a8192902e20d776/badge?branch=master)](https://app.shippable.com/projects/573f2b372a8192902e20d776)
+
+# Snap CI
+
+Website: https://snap-ci.com
+
+[![Build Status](https://snap-ci.com/markuspoerschke/guestbook/branch/master/build_image)](https://snap-ci.com/markuspoerschke/guestbook/branch/master)
