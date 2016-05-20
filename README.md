@@ -19,3 +19,9 @@ Website: https://drone.io
 Website: https://circleci.com
 
 [![CircleCI](https://circleci.com/gh/markuspoerschke/guestbook.svg?style=svg)](https://circleci.com/gh/markuspoerschke/guestbook)
+
+### shippable
+
+Website: http://shippable.com
+
+ [![Run Status](https://api.shippable.com/projects/573f2b372a8192902e20d776/badge?branch=master)](https://app.shippable.com/projects/573f2b372a8192902e20d776)
