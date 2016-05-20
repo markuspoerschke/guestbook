@@ -1,0 +1,6 @@
+build:
+  image: php
+  commands:
+    - composer selfupdate
+    - composer install
+    - composer test
