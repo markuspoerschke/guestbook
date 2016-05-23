@@ -1,0 +1,22 @@
+build:
+  tests:
+    override:
+      -
+        command: 'composer test'
+        coverage:
+          file: 'build/coverage.xml'
+          format: 'clover'
+
+filter:
+  excluded_paths:
+    - 'tests/*'
+
+checks:
+  php:
+    uppercase_constants: true
+    simplify_boolean_return: true
+    return_doc_comments: true
+    use_self_instead_of_fqcn: true
+    newline_at_end_of_file: true
+    encourage_single_quotes: true
+    classes_in_camel_caps: true
