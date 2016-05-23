@@ -88,3 +88,8 @@ Website: https://gitlab.com
 ### Semaphore
 
 [![Build Status](https://semaphoreci.com/api/v1/markuspoerschke/guestbook/branches/master/badge.svg)](https://semaphoreci.com/markuspoerschke/guestbook)
+
+
+### continuousphp
+
+[![Build Status](https://status.continuousphp.com/git-hub/markuspoerschke/guestbook?token=85f6d875-9525-432a-b433-5c190a04ad65)](https://continuousphp.com/git-hub/markuspoerschke/guestbook)
