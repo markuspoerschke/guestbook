@@ -83,3 +83,8 @@ Website: https://gitlab.com
 ### Coveralls
 
 [![Coverage Status](https://coveralls.io/repos/github/markuspoerschke/guestbook/badge.svg?branch=master)](https://coveralls.io/github/markuspoerschke/guestbook?branch=master)
+
+
+### Semaphore
+
+[![Build Status](https://semaphoreci.com/api/v1/markuspoerschke/guestbook/branches/master/badge.svg)](https://semaphoreci.com/markuspoerschke/guestbook)
