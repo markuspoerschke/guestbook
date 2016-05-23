@@ -78,3 +78,8 @@ Website: https://gitlab.com
 ### Version Eye
 
 [![Dependency Status](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1)
+
+
+### Coveralls
+
+[![Coverage Status](https://coveralls.io/repos/github/markuspoerschke/guestbook/badge.svg?branch=master)](https://coveralls.io/github/markuspoerschke/guestbook?branch=master)
