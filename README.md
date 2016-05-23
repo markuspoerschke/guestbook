@@ -73,3 +73,8 @@ Website: https://gitlab.com
 [![Build Status](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/badges/build.png?b=master)](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/?branch=master)
+
+
+### Version Eye
+
+[![Dependency Status](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1)
