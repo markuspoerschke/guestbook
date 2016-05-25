@@ -1,12 +1,5 @@
 <?php
 
-/**
- * @author    Markus Poerschke <markus.poerschke@trivago.com>
- * @since     2016-05-25
- * @copyright 2016 (c) trivago GmbH, Düsseldorf
- * @license   All rights reserved.
- */
-
 namespace Entity;
 
 use Eluceo\Guestbook\Entity\Entry;
