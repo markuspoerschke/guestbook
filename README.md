@@ -93,3 +93,8 @@ Website: https://gitlab.com
 ### continuousphp
 
 [![Build Status](https://status.continuousphp.com/git-hub/markuspoerschke/guestbook?token=85f6d875-9525-432a-b433-5c190a04ad65)](https://continuousphp.com/git-hub/markuspoerschke/guestbook)
+
+
+### rumi (no cloud CI)
+
+rumi is a container based job executor. (https://github.com/trivago/rumi)

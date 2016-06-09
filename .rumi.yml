@@ -1,0 +1,22 @@
+stages:
+  Build:
+    Composer install:
+      docker:
+        composer:
+          image: composer/composer
+          volumes:
+            - .:/app
+      commands:
+        - composer install --no-scripts --ignore-platform-reqs
+
+  Tests:
+    Unit Tests:
+      docker:
+        php:
+          image: php
+          volumes:
+            - .:/app
+      commands:
+        - php -v
+        - cd /app
+        - php vendor/bin/phpunit
