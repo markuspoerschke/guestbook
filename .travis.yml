@@ -11,9 +11,7 @@ php:
   - 7.0
 
 env:
-  - DB_DSN="mysql:dbname=guestbook;host=localhost"
-  - DB_USER=root
-  - DB_PASSWORD=
+  - DB_DSN="mysql:dbname=guestbook;host=localhost" DB_USER=root DB_PASSWORD=""
 
 before_script:
   - mysql -e "CREATE DATABASE IF NOT EXISTS `guestbook`;" -uroot
