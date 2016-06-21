@@ -14,7 +14,7 @@ env:
   - DB_DSN="mysql:dbname=guestbook;host=localhost" DB_USER=root DB_PASSWORD=""
 
 before_script:
-  - mysql -e "CREATE DATABASE IF NOT EXISTS `guestbook`;" -uroot
+  - mysql -e "CREATE DATABASE IF NOT EXISTS guestbook;"
   - mysql guestbook < ./etc/schema.sql
   - composer self-update
   - composer install
