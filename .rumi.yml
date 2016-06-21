@@ -18,6 +18,10 @@ stages:
             - .:/app
           links:
             - mysql
+          environment:
+            DB_DSN: mysql:dbname=guestbook;host=mysql
+            DB_USER: root
+            DB_PASSWORD: root
         mysql:
           image: mysql
           environment:
