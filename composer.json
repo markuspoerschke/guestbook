@@ -22,6 +22,10 @@
         "phpunit/phpunit": "~4.8"
     },
     "scripts": {
-        "test": "php vendor/bin/phpunit"
+        "test": [
+            "php -v",
+            "php bin/test-env.php",
+            "php vendor/bin/phpunit"
+        ]
     }
 }
