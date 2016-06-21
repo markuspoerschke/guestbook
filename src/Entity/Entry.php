@@ -20,6 +20,16 @@ class Entry
     private $body = '';
 
     /**
+     * @var \DateTimeImmutable
+     */
+    private $createdAt;
+
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+    }
+
+    /**
      * @return string
      */
     public function getAuthorName()
@@ -65,5 +75,21 @@ class Entry
     public function setBody($body)
     {
         $this->body = $body;
+    }
+
+    /**
+     * @return \DateTimeImmutable
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTimeImmutable $createdAt
+     */
+    public function setCreatedAt(\DateTimeImmutable $createdAt)
+    {
+        $this->createdAt = $createdAt;
     }
 }

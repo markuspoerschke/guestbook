@@ -16,7 +16,20 @@ stages:
           image: php
           volumes:
             - .:/app
+          links:
+            - mysql
+        mysql:
+          image: mysql
+          environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: guestbook
       commands:
+        # Install MySQL (should be done before in an own CI PHP image...)
+        - docker-php-ext-install pdo pdo_mysql
+
+        #
         - php -v
         - cd /app
+        - ./bin/wait-for-it.sh mysql:3306
+        - php bin/load-schema.php
         - php vendor/bin/phpunit

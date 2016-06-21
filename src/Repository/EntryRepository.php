@@ -4,26 +4,15 @@ namespace Eluceo\Guestbook\Repository;
 
 use Eluceo\Guestbook\Entity\Entry;
 
-class EntryRepository
+interface EntryRepository
 {
-    /**
-     * @var array
-     */
-    private $entries = [];
-
     /**
      * @param Entry $entry
      */
-    public function add(Entry $entry)
-    {
-        $this->entries[] = $entry;
-    }
+    public function add(Entry $entry);
 
     /**
      * @return Entry[]
      */
-    public function getAll()
-    {
-        return $this->entries;
-    }
+    public function getAll();
 }
