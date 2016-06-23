@@ -98,3 +98,7 @@ Website: https://gitlab.com
 ### rumi (no cloud CI)
 
 rumi is a container based job executor. (https://github.com/trivago/rumi)
+
+### Probo CI
+
+https://app.probo.ci
