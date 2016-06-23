@@ -54,7 +54,7 @@ QUERY;
             $entry->setAuthorName($row['author_name']);
             $entry->setAuthorEmail($row['author_email']);
             $entry->setBody($row['body']);
-            $entry->setCreatedAt(\DateTimeImmutable::createFromFormat(static::DATE_FORMAT, $row['created_at']));
+            $entry->setCreatedAt(\DateTime::createFromFormat(static::DATE_FORMAT, $row['created_at']));
 
             $entries[] = $entry;
         }
