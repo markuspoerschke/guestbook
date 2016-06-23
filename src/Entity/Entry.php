@@ -20,13 +20,13 @@ class Entry
     private $body = '';
 
     /**
-     * @var \DateTimeImmutable
+     * @var \DateTime
      */
     private $createdAt;
 
     public function __construct()
     {
-        $this->createdAt = new \DateTimeImmutable();
+        $this->createdAt = new \DateTime();
     }
 
     /**
@@ -88,7 +88,7 @@ class Entry
     /**
      * @param \DateTimeImmutable $createdAt
      */
-    public function setCreatedAt(\DateTimeImmutable $createdAt)
+    public function setCreatedAt(\DateTime $createdAt)
     {
         $this->createdAt = $createdAt;
     }
