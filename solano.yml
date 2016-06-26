@@ -1,0 +1,13 @@
+php:
+  version: '5.5.16'
+hooks:
+  pre_setup: composer.phar install
+cache:
+  key_paths:
+    - composer.json
+    - composer.lock
+  save_paths:
+    - vendor
+test_pattern: 'none'
+tests:
+  - composer.phar test
