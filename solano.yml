@@ -1,5 +1,5 @@
 php:
-  version: '5.5.16'
+  version: '7.0.6'
 hooks:
   pre_setup: composer.phar install
 cache:
