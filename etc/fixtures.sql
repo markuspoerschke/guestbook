@@ -1,4 +1,4 @@
-INSERT INTO `guestbook`
+INSERT INTO `guestbook_entry`
 (`author_name`, `author_email`, `body`, `created_at`)
 VALUES
 ("Hans", "hans@peter.example.com", "Toller Eintrag Lorem Ipsum...", "2016-05-23 15:54:21"),
