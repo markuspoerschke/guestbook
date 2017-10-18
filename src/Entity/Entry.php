@@ -78,7 +78,7 @@ class Entry
     }
 
     /**
-     * @return \DateTimeImmutable
+     * @return \DateTime
      */
     public function getCreatedAt()
     {

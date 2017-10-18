@@ -1,7 +1,7 @@
 www:
   build: ./etc/php
   volumes:
-    - .:/var/www/html
+    - .:/var/www
   links:
     - mysql
   ports:
