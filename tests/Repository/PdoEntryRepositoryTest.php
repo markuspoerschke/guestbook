@@ -13,14 +13,14 @@ class PdoEntryRepositoryTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $db_dsn = isset($_SERVER['DB_DSN']) ? $_SERVER['DB_DSN'] : false;
+        $db_dsn = isset($_SERVER['GUESTBOOK_DB_DSN']) ? $_SERVER['GUESTBOOK_DB_DSN'] : false;
 
         if (!$db_dsn) {
             $this->markTestSkipped('No DB available.');
         }
 
-        $db_user = isset($_SERVER['DB_USER']) ? $_SERVER['DB_USER'] : 'root';
-        $db_password = isset($_SERVER['DB_PASSWORD']) ? $_SERVER['DB_PASSWORD'] : '';
+        $db_user = isset($_SERVER['GUESTBOOK_DB_USER']) ? $_SERVER['GUESTBOOK_DB_USER'] : 'root';
+        $db_password = isset($_SERVER['GUESTBOOK_DB_PASSWORD']) ? $_SERVER['GUESTBOOK_DB_PASSWORD'] : '';
         $this->repository = new PdoEntryRepository(new \PDO($db_dsn, $db_user, $db_password));
     }
 
