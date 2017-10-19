@@ -46,6 +46,11 @@ QUERY;
     public function getAll()
     {
         $rows = $this->connection->query('SELECT * FROM `guestbook_entry`', \PDO::FETCH_ASSOC);
+
+        if (empty($rows)) {
+            return [];
+        }
+
         $entries = [];
 
         foreach ($rows as $row)
