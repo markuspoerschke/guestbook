@@ -9,7 +9,7 @@ php:
   - 7.0
 
 env:
-  - DB_DSN="mysql:dbname=guestbook;host=localhost" DB_USER=root DB_PASSWORD=""
+  - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
 
 before_script:
   - mysql -e "CREATE DATABASE IF NOT EXISTS guestbook;"
