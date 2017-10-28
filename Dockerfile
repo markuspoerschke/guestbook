@@ -2,7 +2,7 @@ FROM composer as composer
 
 COPY ./ /var/www
 WORKDIR /var/www
-RUN composer install
+RUN composer install --no-dev
 
 FROM php:7.0.8-apache
 
