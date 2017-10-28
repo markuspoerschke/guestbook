@@ -12,6 +12,9 @@ $entries = $repository->getAll();
 ?>
 
 <html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
     <body>
         <h1>Guestbook</h1>
         <p><a href="create.php">Leave a nice message</a></p>

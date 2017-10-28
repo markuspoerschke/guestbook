@@ -1,0 +1,20 @@
+* {
+    font-family: "Comic Sans MS";
+}
+
+body {
+    background: papayawhip;
+}
+
+table th {
+    background: #cccccc;
+}
+
+a {
+    color: darkgreen;
+}
+
+textarea {
+    min-width: 300px;
+    height: 100px;
+}
