@@ -1,4 +1,0 @@
-steps:
-  - name: Run tests
-    plugin: Shell
-    command: 'php -v ; composer install ; composer test'
