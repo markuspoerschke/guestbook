@@ -19,6 +19,7 @@
         "php": ">=7.0"
     },
     "require-dev": {
+        "doctrine/instantiator": "~1.0.0",
         "phpunit/phpunit": "^6.0"
     },
     "scripts": {
