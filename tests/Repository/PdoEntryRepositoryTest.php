@@ -3,8 +3,9 @@
 namespace Eluceo\Guestbook\Repository;
 
 use Eluceo\Guestbook\Entity\Entry;
+use PHPUnit\Framework\TestCase;
 
-class PdoEntryRepositoryTest extends \PHPUnit_Framework_TestCase
+class PdoEntryRepositoryTest extends TestCase
 {
     /**
      * @var PdoEntryRepository

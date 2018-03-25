@@ -3,8 +3,9 @@
 namespace Eluceo\Guestbook\Repository;
 
 use Eluceo\Guestbook\Entity\Entry;
+use PHPUnit\Framework\TestCase;
 
-class InMemoryEntryRepositoryTest extends \PHPUnit_Framework_TestCase
+class InMemoryEntryRepositoryTest extends TestCase
 {
     public function test_is_empty()
     {
