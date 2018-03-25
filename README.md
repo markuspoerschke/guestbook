@@ -41,7 +41,7 @@ Website: https://codeship.com
 
 Website: https://gitlab.com
 
-[![build status](https://gitlab.com/markuspoerschke/guestbook/badges/master/build.svg)](https://gitlab.com/markuspoerschke/guestbook/commits/master)
+[![pipeline status](https://gitlab.com/markuspoerschke/guestbook/badges/master/pipeline.svg)](https://gitlab.com/markuspoerschke/guestbook/commits/master)
 
 
 ### AppVeyor
