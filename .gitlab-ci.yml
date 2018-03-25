@@ -1,5 +1,9 @@
 before_script:
-  - bash ci/gitlab/docker_install.sh
+  # Install missing packages
+  - apt-get update -yqq && apt-get install git zlib1g-dev -yqq
+  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+  - docker-php-ext-install pdo pdo_mysql zip
+
   - php -v
   - php bin/load-schema.php
   - composer install
@@ -14,12 +18,17 @@ variables:
   GUESTBOOK_DB_USER: root
   GUESTBOOK_DB_PASSWORD: root
 
-test:5.6:
-  image: php:5.6
+test:7.0:
+  image: php:7.0
   script:
-    - composer test
+    - vendor/bin/phpunit --coverage-text --colors=never
 
-test:latest:
-  image: php
+test:7.1:
+  image: php:7.1
   script:
-    - composer test
+    - vendor/bin/phpunit --coverage-text --colors=never
+
+test:7.2:
+  image: php:7.2
+  script:
+    - vendor/bin/phpunit --coverage-text --colors=never
