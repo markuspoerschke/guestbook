@@ -58,7 +58,7 @@ Website: https://gitlab.com
 
 ### Version Eye
 
-[![Dependency Status](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1/badge.svg?style=flat)](https://www.versioneye.com/user/projects/5742d00cce8d0e00360bd1d1)
+[![Dependency Status](https://www.versioneye.com/user/projects/5ab7e7180fb24f4489395c8a/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/5ab7e7180fb24f4489395c8a)
 
 
 ### Coveralls
