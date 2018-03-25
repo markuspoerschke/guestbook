@@ -80,10 +80,6 @@ Website: https://gitlab.com
 
 rumi is a container based job executor. (https://github.com/trivago/rumi)
 
-### Probo CI
-
-https://app.probo.ci
-
 ### Solano CI
 
 [![](https://ci.solanolabs.com:443/markuspoerschke/guestbook/badges/branches/master)](https://ci.solanolabs.com:443/markuspoerschke/guestbook/suites/472869)
