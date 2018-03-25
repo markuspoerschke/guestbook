@@ -3,8 +3,9 @@
 namespace Entity;
 
 use Eluceo\Guestbook\Entity\Entry;
+use PHPUnit\Framework\TestCase;
 
-class EntryTest extends \PHPUnit_Framework_TestCase
+class EntryTest extends TestCase
 {
     public function test_getter_setter()
     {

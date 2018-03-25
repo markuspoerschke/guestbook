@@ -4,9 +4,9 @@ services:
   - mysql
 
 php:
-  - hhvm
-  - 5.6
   - 7.0
+  - 7.1
+  - 7.2
 
 env:
   - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
