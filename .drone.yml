@@ -1,6 +1,0 @@
-build:
-  image: php
-  commands:
-    - php -v
-    - composer install
-    - composer test
