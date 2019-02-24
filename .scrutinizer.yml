@@ -4,7 +4,7 @@ build:
       -
         command: 'composer test'
         coverage:
-          file: 'build/coverage.xml'
+          file: 'build/logs/clover.xml'
           format: 'clover'
 
 filter:
