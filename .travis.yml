@@ -9,8 +9,10 @@ php:
   - 7.2
 
 env:
-  - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
-  - CC_TEST_REPORTER_ID=ea7b390e89463c4fdec0b3897e0d2bd0dee94a19677a7a84270b9b140c84a675
+  global:
+    - CC_TEST_REPORTER_ID=ea7b390e89463c4fdec0b3897e0d2bd0dee94a19677a7a84270b9b140c84a675
+  matrix:
+    - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
 
 before_script:
   # Code Climate before script (installs test reporter)
@@ -36,4 +38,4 @@ after_success:
   - travis_retry php coveralls.phar -x build/coverage.xml
 
   # Report test result to Code Climate
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t clover
