@@ -35,7 +35,7 @@ after_success:
   - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.0/coveralls.phar
   - chmod +x coveralls.phar
   - mkdir -p build/logs
-  - travis_retry php coveralls.phar -x build/logs/coverage.xml
+  - travis_retry php coveralls.phar -x build/logs/clover.xml
 
   # Report test result to Code Climate
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t clover
