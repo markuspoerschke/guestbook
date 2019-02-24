@@ -10,17 +10,30 @@ php:
 
 env:
   - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
+  - CC_TEST_REPORTER_ID=ABC123
 
 before_script:
+  # Code Climate before script (installs test reporter)
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+  # Setup database
   - mysql -e "CREATE DATABASE IF NOT EXISTS guestbook;"
   - mysql guestbook < ./etc/schema.sql
+
+  # Install composer dependencies
   - composer self-update
   - composer install
 
 script: composer test
 
 after_success:
+  # Report code coverage to coveralls
   - wget https://github.com/satooshi/php-coveralls/releases/download/v1.0.0/coveralls.phar
   - chmod +x coveralls.phar
   - mkdir -p build/logs
   - travis_retry php coveralls.phar -x build/coverage.xml
+
+  # Report test result to Code Climate
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
