@@ -4,9 +4,8 @@ services:
   - mysql
 
 php:
-  - 7.0
-  - 7.1
-  - 7.2
+  - 7.3
+  - 7.4
 
 env:
   global:
@@ -14,7 +13,7 @@ env:
   matrix:
     - GUESTBOOK_DB_DSN="mysql:dbname=guestbook;host=localhost" GUESTBOOK_DB_USER=root GUESTBOOK_DB_PASSWORD=""
 
-before_script:
+script:
   # Code Climate before script (installs test reporter)
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
@@ -25,10 +24,7 @@ before_script:
   - mysql guestbook < ./etc/schema.sql
 
   # Install composer dependencies
-  - composer self-update
-  - composer install
-
-script: composer test
+  - make test
 
 after_success:
   # Report code coverage to coveralls

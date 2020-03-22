@@ -12,7 +12,7 @@ class PdoEntryRepositoryTest extends TestCase
      */
     private $repository;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $db_dsn = isset($_SERVER['GUESTBOOK_DB_DSN']) ? $_SERVER['GUESTBOOK_DB_DSN'] : false;
 
@@ -28,7 +28,7 @@ class PdoEntryRepositoryTest extends TestCase
     public function test_is_empty()
     {
         $entries = $this->repository->getAll();
-        $this->assertInternalType('array', $entries);
+        $this->assertIsArray($entries);
         $this->assertCount(0, $entries);
     }
 

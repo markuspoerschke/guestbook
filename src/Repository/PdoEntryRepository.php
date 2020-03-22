@@ -2,7 +2,10 @@
 
 namespace Eluceo\Guestbook\Repository;
 
+use DateTime;
 use Eluceo\Guestbook\Entity\Entry;
+use Exception;
+use PDO;
 
 class PdoEntryRepository implements EntryRepository
 {
@@ -14,11 +17,11 @@ class PdoEntryRepository implements EntryRepository
     const DATE_FORMAT = 'Y-m-d H:i:s';
 
     /**
-     * @var \PDO
+     * @var PDO
      */
     private $connection;
 
-    public function __construct(\PDO $connection)
+    public function __construct(PDO $connection)
     {
         $this->connection = $connection;
     }
@@ -39,13 +42,13 @@ QUERY;
         $statement->bindValue('created_at', $entry->getCreatedAt()->format(static::DATE_FORMAT));
 
         if (!$statement->execute()) {
-            throw new \Exception(implode(' ', $statement->errorInfo()));
+            throw new Exception(implode(' ', $statement->errorInfo()));
         }
     }
 
     public function getAll()
     {
-        $rows = $this->connection->query('SELECT * FROM `guestbook_entry`', \PDO::FETCH_ASSOC);
+        $rows = $this->connection->query('SELECT * FROM `guestbook_entry`', PDO::FETCH_ASSOC);
 
         if (empty($rows)) {
             return [];
@@ -53,13 +56,12 @@ QUERY;
 
         $entries = [];
 
-        foreach ($rows as $row)
-        {
+        foreach ($rows as $row) {
             $entry = new Entry();
             $entry->setAuthorName($row['author_name']);
             $entry->setAuthorEmail($row['author_email']);
             $entry->setBody($row['body']);
-            $entry->setCreatedAt(\DateTime::createFromFormat(static::DATE_FORMAT, $row['created_at']));
+            $entry->setCreatedAt(DateTime::createFromFormat(static::DATE_FORMAT, $row['created_at']));
 
             $entries[] = $entry;
         }

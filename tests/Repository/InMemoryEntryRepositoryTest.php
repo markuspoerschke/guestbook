@@ -12,7 +12,7 @@ class InMemoryEntryRepositoryTest extends TestCase
         $repository = new InMemoryEntryRepository();
 
         $entries = $repository->getAll();
-        $this->assertInternalType('array', $entries);
+        $this->assertIsArray($entries);
         $this->assertCount(0, $entries);
     }
 

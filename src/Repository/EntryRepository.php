@@ -6,9 +6,6 @@ use Eluceo\Guestbook\Entity\Entry;
 
 interface EntryRepository
 {
-    /**
-     * @param Entry $entry
-     */
     public function add(Entry $entry);
 
     /**
