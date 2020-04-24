@@ -1,10 +1,8 @@
 language: php
 
 php:
-  - "7.0"
+  - "7.4"
 
 build:
   ci:
-    - php -v
-    - composer install
-    - composer test
+    - make test

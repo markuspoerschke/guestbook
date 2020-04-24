@@ -1,6 +1,8 @@
-/vendor
+/.idea
+/.php_cs.cache
 /_builds
 /_cache
 /_projects
 /_steps
 /build
+/vendor
