@@ -70,11 +70,6 @@ Website: https://gitlab.com
 
 [![Build Status](https://semaphoreci.com/api/v1/markuspoerschke/guestbook/branches/master/badge.svg)](https://semaphoreci.com/markuspoerschke/guestbook)
 
-
-### continuousphp
-
-[![Build Status](https://status.continuousphp.com/git-hub/markuspoerschke/guestbook?token=85f6d875-9525-432a-b433-5c190a04ad65)](https://continuousphp.com/git-hub/markuspoerschke/guestbook)
-
 ### Code Climate
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e88ad42098c513d3fb2d/maintainability)](https://codeclimate.com/github/markuspoerschke/guestbook/maintainability)
