@@ -80,10 +80,6 @@ Website: https://gitlab.com
 
 rumi is a container based job executor. (https://github.com/trivago/rumi)
 
-### Solano CI
-
-[![](https://ci.solanolabs.com:443/markuspoerschke/guestbook/badges/branches/master)](https://ci.solanolabs.com:443/markuspoerschke/guestbook/suites/472869)
-
 ### Code Climate
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/e88ad42098c513d3fb2d/maintainability)](https://codeclimate.com/github/markuspoerschke/guestbook/maintainability)
