@@ -20,10 +20,6 @@ Website: https://gitlab.com
 
 [![pipeline status](https://gitlab.com/markuspoerschke/guestbook/badges/master/pipeline.svg)](https://gitlab.com/markuspoerschke/guestbook/commits/master)
 
-### AppVeyor
-
-[![Build status](https://ci.appveyor.com/api/projects/status/1sgbt8joq2ta8cwk?svg=true)](https://ci.appveyor.com/project/markuspoerschke/guestbook)
-
 ### scrutinizer
 
 [![Build Status](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/badges/build.png?b=master)](https://scrutinizer-ci.com/g/markuspoerschke/guestbook/build-status/master)
