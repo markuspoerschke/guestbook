@@ -22,14 +22,6 @@ Website: http://shippable.com
 
  [![Run Status](https://api.shippable.com/projects/573f2b372a8192902e20d776/badge?branch=master)](https://app.shippable.com/projects/573f2b372a8192902e20d776)
 
-
-### Wercker
-
-Website: https://wercker.com
-
-[![wercker status](https://app.wercker.com/status/689e1d91b43ca3804bc0c6dbbdc7309b/s "wercker status")](https://app.wercker.com/project/bykey/689e1d91b43ca3804bc0c6dbbdc7309b)
-
-
 ### Codeship
 
 Website: https://codeship.com
