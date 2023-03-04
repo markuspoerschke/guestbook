@@ -1,0 +1,39 @@
+version: '3.9'
+
+services:
+  app:
+    extends:
+      service: build
+    environment:
+      GUESTBOOK_DB_DSN: mysql:dbname=guestbook;host=database
+      GUESTBOOK_DB_USER: guestbook
+      GUESTBOOK_DB_PASSWORD: guestbook
+
+  build:
+    build:
+      context: .
+      target: builder
+    environment:
+      COMPOSER_HOME: /var/composer
+    volumes:
+      - .:/var/www
+      - composer:/var/composer
+
+  database:
+    image: mysql:8
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: guestbook
+      MYSQL_USER: guestbook
+      MYSQL_PASSWORD: guestbook
+    volumes:
+      - ./etc/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
+      - ./etc/fixtures.sql:/docker-entrypoint-initdb.d/02-fixtures.sql
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      retries: 10
+      timeout: 10s
+      interval: 1s
+
+volumes:
+  composer:

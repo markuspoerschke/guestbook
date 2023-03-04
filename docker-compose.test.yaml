@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  app-test:
+    extends:
+      service: app
+      file: "docker-compose.common.yaml"
+    depends_on:
+      database-test:
+        condition: service_healthy
+    command: [ "composer", "test" ]
+    environment:
+      GUESTBOOK_DB_DSN: mysql:dbname=guestbook;host=database-test
+      XDEBUG_MODE: coverage
+
+  database-test:
+    extends:
+      service: database
+      file: "docker-compose.common.yaml"
+
+volumes:
+  composer:

@@ -1,8 +1,8 @@
 {
     "name": "eluceo/guestbook",
-    "type": "application",
     "description": "A sample application for testing different CI services.",
     "license": "MIT",
+    "type": "application",
     "authors": [
         {
             "name": "Markus Poerschke",
@@ -10,31 +10,33 @@
         }
     ],
     "require": {
-        "php": "7.4.*",
+        "php": "8.1.*",
         "ext-pdo": "*"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.3",
-        "friendsofphp/php-cs-fixer": "^2.16",
-        "phpunit/phpunit": "^9",
-        "rector/rector": "^0.7.7",
-        "vimeo/psalm": "^3.9"
+        "ergebnis/composer-normalize": "^2.29",
+        "friendsofphp/php-cs-fixer": "^3",
+        "phpunit/phpunit": "^10",
+        "vimeo/psalm": "^5"
     },
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Eluceo\\Guestbook\\": "src/"
         }
     },
-    "minimum-stability": "stable",
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        }
+    },
     "scripts": {
         "fix": [
             "@fix:composer",
-            "@fix:code-style",
-            "@fix:rector"
+            "@fix:code-style"
         ],
         "fix:code-style": "php-cs-fixer fix src",
         "fix:composer": "@composer normalize",
-        "fix:rector": "rector process src",
         "test": [
             "@composer normalize --dry-run",
             "@test:code-style",
@@ -43,7 +45,6 @@
         ],
         "test:code-style": "php-cs-fixer fix --dry-run src",
         "test:phpunit": "phpunit",
-        "test:psalm": "psalm src",
-        "test:rector": "rector process --dry-run src"
+        "test:psalm": "psalm"
     }
 }
