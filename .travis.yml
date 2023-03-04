@@ -4,7 +4,7 @@ services:
   - mysql
 
 php:
-  - 7.4
+  - 8.1
 
 env:
   global:
@@ -23,7 +23,10 @@ script:
   - mysql guestbook < ./etc/schema.sql
 
   # Install composer dependencies
-  - make test
+  - composer install
+
+  # Run tests
+  - composer test
 
 after_success:
   # Report code coverage to coveralls
