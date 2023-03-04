@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  app:
+    extends:
+      service: app
+      file: "docker-compose.common.yaml"
+    depends_on:
+      database:
+        condition: service_healthy
+    ports:
+      - "80"
+
+  build:
+    extends:
+      service: build
+      file: "docker-compose.common.yaml"
+
+  database:
+    extends:
+      service: database
+      file: "docker-compose.common.yaml"
+    volumes:
+      - ./etc/fixtures.sql:/docker-entrypoint-initdb.d/02-fixtures.sql
+
+volumes:
+  composer:
