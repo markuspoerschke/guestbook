@@ -26,7 +26,7 @@ stop:
 
 .PHONY: clean
 clean:
-	rm -rf vendor
+	rm -rf vendor .phpunit.cache build .php-cs-fixer.cache .phpunit.result.cache
 	docker compose down
 	$(MAKE) test-clean
 
@@ -53,7 +53,7 @@ test: vendor
 		$(MAKE) test-clean
 	}
 	trap tearDown EXIT
-	docker compose -f docker-compose.test.yaml up --exit-code-from app-test --attach app-test
+	docker compose -f docker-compose.test.yaml up --exit-code-from app-test
 
 .PHONY: test-clean
 test-clean:

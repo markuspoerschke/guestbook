@@ -22,18 +22,18 @@ services:
   database:
     image: mysql:8
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: guestbook
       MYSQL_USER: guestbook
       MYSQL_PASSWORD: guestbook
     volumes:
       - ./etc/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql
-      - ./etc/fixtures.sql:/docker-entrypoint-initdb.d/02-fixtures.sql
     healthcheck:
-      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      test: "mysqladmin ping -h$$HOSTNAME -uroot -proot"
       retries: 10
-      timeout: 10s
-      interval: 1s
+      timeout: 1s
+      interval: 2s
+      start_period: 10s
 
 volumes:
   composer:
